@@ -1,0 +1,36 @@
+name: Sync to Gist
+on:
+  push:
+    branches:
+      - 'main'
+jobs:
+  Project-1-Gist:
+    runs-on: ubuntu-latest
+    steps:
+        - uses: actions/checkout@v3
+        - name: Gist Repo Sync
+        uses: pentatonicfunk/action-gist-repo-sync@v1
+        with:
+          gist_token: ${{ secrets.GIST_TOKEN }}
+          gist_id: 38384d2b8b1a7846f415609ddd8967c6
+          source_path: project-1
+  Project-2-Gist:
+    runs-on: ubuntu-latest
+    steps:
+        - uses: actions/checkout@v3
+        - name: Gist Repo Sync
+          uses: pentatonicfunk/action-gist-repo-sync@v1
+          with:
+            gist_token: ${{ secrets.GIST_TOKEN }}
+            gist_id: 8d6a6a06d96beefd972b48c48f00db49
+            source_path: project-2
+  Project-3-Gist:
+    runs-on: ubuntu-latest
+    steps:
+        - uses: actions/checkout@v3
+        - name: Gist Repo Sync
+        uses: pentatonicfunk/action-gist-repo-sync@v1
+        with:
+          gist_token: ${{ secrets.GIST_TOKEN }}
+          gist_id: 32fb10a80751c8d87d59aacca8d6a8e7
+          source_path: project-3
